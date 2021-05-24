@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         kali-defaults kali-desktop-${KALI_DESKTOP} && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-EXPOSE 5900/tcp 6080/tcp
+EXPOSE 5900/tcp $PORT/tcp
 ENV DISPLAY :1
 ENV KALI_DESKTOP ${KALI_DESKTOP}
 
